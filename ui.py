@@ -19,7 +19,7 @@ class Ventana(wx.Frame):
         # begin wxGlade: Ventana.__init__
         kwds["style"] = wx.BORDER_SIMPLE | wx.DEFAULT_FRAME_STYLE
         wx.Frame.__init__(self, *args, **kwds)
-        self.labelTitulo = wx.StaticText(self, wx.ID_ANY, _("Riego en flores"))
+        self.labelTitulo = wx.StaticText(self, wx.ID_ANY, _("Riego en Rosa Freedom"))
         self.panelCentral = wx.Panel(self, wx.ID_ANY)
         self.panelIzquierda = wx.Panel(self.panelCentral, wx.ID_ANY)
         self.labelDatos = wx.StaticText(self.panelIzquierda, wx.ID_ANY, _("Datos"))
@@ -100,9 +100,11 @@ class Ventana(wx.Frame):
 
     def __set_properties(self):
         # begin wxGlade: Ventana.__set_properties
-        self.SetTitle(_("ventana"))
+        self.SetTitle(_("Riego en Rosa Freedom"))
         self.SetSize((1024, 600))
+        self.SetBackgroundColour("#f2f2f2")
         self.labelTitulo.SetFont(wx.Font(35, wx.DEFAULT, wx.NORMAL, wx.NORMAL, 0, ".SF NS Text"))
+        self.labelTitulo.SetBackgroundColour("#f2f2f2")
         self.labelDatos.SetFont(wx.Font(14, wx.DEFAULT, wx.NORMAL, wx.BOLD, 0, ""))
         self.labelFormulas.SetFont(wx.Font(14, wx.DEFAULT, wx.NORMAL, wx.BOLD, 0, ""))
         self.textPPM.SetToolTipString(_("Partes por millon"))
@@ -140,6 +142,8 @@ class Ventana(wx.Frame):
         self.labelIngredienteActivo1.SetForegroundColour(wx.Colour(79, 79, 79))
         self.labelIngredienteActivo1.SetFont(wx.Font(10, wx.DEFAULT, wx.NORMAL, wx.NORMAL, 0, ""))
         self.panelCentral.SetMinSize((1000, 350))
+        self.panelCentral.SetBackgroundColour("#f2f2f2")
+        self.panelBotones.SetBackgroundColour("#f2f2f2")
         # end wxGlade
 
     def __do_layout(self):
